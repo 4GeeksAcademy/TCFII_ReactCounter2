@@ -1,5 +1,6 @@
 import React from "react";
 import { CardRow } from "./CardRow";
+import { Clock } from "./Clock";
 import { Card } from "./Card";
 
 //include images into your bundle
@@ -10,7 +11,7 @@ const Home = () => {
 	return (
 		<>
 			<CardRow>
-				<Card />
+				<Clock />
 				<Card />
 				<Card />
 				<Card />
