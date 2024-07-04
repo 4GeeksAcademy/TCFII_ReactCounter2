@@ -1,7 +1,18 @@
 import React from 'react';
+import { Card } from './Card';
+import { CardRow } from './CardRow';
+import { Clock } from './Clock';
 
-export function SecondsCounterView () {
+export function SecondsCounterView ({seconds}) {
+    const time=seconds;
+    const fullTime = time.toString().padStart(6, '0');
+    const timeArray= fullTime.split("");
     return (
-        <div className ="grid grid-cols-1 lg:grid-cols-7 gap-4">{children}</div>
+        <CardRow>
+            <Clock />
+            {timeArray.map(crdnum => (
+                <Card theValue={crdnum}/>
+            ))}
+        </CardRow>
     );
 }
